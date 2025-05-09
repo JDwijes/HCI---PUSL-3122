@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modular Room Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div><strong>Welcome,</strong> <span id="userRole"></span></div>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <section class="toolbar" id="adminTools">
+    <button onclick="addItem('chair')">Add Chair</button>
+    <button onclick="addItem('table')">Add Table</button>
+    <button onclick="addItem('lamp')">Add Lamp</button>
+    <button onclick="saveLayout()">💾 Save</button>
+    <button onclick="clearLayout()">🗑️ Clear</button>
+  </section>
+
+  <section class="layout">
+    <div class="column">
+      <h2>2D View</h2>
+      <canvas id="canvas2d" width="400" height="300"></canvas>
+    </div>
+    <div class="column">
+      <h2>3D View</h2>
+      <div id="canvas3d"></div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
